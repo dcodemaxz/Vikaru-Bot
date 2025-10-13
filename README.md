@@ -1,6 +1,6 @@
-##### Perhatian ( Indonesian )
+> Translate ( Indonesian )
 
-Jika kamu menggunakan chrome kamu bisa mengetuk titik 3 yang ada di pojok kanan atas lalu pilih opsi "Terjemahkan..."
+Jika kamu menggunakan browser chrome kamu bisa mengetuk titik 3 yang ada di pojok kanan atas untuk opsi "Terjemahkan..."
 
 ---
 
@@ -29,8 +29,7 @@ Jika kamu menggunakan chrome kamu bisa mengetuk titik 3 yang ada di pojok kanan 
 
 ## # Vikaru-Md | ( install )
 
-- Open your terminal / Ubuntu / [Termux](https://github.com/termux/termux-app/releases/tag/)
-- Update your terminal ( opsional )
+- Open and update your terminal / Ubuntu / [Termux](https://github.com/termux/termux-app/releases/tag/)
 
 ```
 apt update && apt upgrade -y
@@ -40,6 +39,12 @@ apt update && apt upgrade -y
 
 ```
 apt install git -y
+```
+
+- Install nodejs
+
+```
+apt install nodejs -y
 ```
 
 - Clone Vikaru-Md repo
