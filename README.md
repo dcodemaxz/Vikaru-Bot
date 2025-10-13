@@ -96,9 +96,9 @@ Ex: +62 895-0889-9033
 
 > Automatically restart the bot if the server closes due to over-limit/error
 
-- 1. Start Normal : The bot will start normally and if there is a fatal error the bot will stop running.
-- 2. Start Looping : The bot will start looping and if there is a fatal error the bot will restart automatically.
-- 3. Install Update : Updates files directly and will overwrite existing files. Make sure you have backed up other important files such as "database" folders and others.
+- 1) Start Normal : The bot will start normally and if there is a fatal error the bot will stop running.
+- 2) Start Looping : The bot will start looping and if there is a fatal error the bot will restart automatically.
+- 3) Install Update : Updates files directly and will overwrite existing files. Make sure you have backed up other important files such as "database" folders and others.
 
 ### [ 2 ] CLI Menu
 
@@ -106,9 +106,9 @@ Ex: +62 895-0889-9033
 
 > Manage sessions in real time while nodejs is running by simply pressing "enter"
 
-- 1. Stop all session : Stops all running bot sessions/numbers
-- 2. Add another session : Adding new bot session/number
-- 3. Run another session : Run another available session in the session list
+- 1) Stop all session : Stops all running bot sessions/numbers
+- 2) Add another session : Adding new bot session/number
+- 3) Run another session : Run another available session in the session list
 
 
 ### [ 3 ] vikaru-md
