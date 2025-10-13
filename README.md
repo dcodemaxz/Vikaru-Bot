@@ -88,7 +88,7 @@ Ex: +62 895-0889-9033
 
 ---
 
-## Vikaru-Md | ( info )
+## # Vikaru-Md | ( features )
 
 ### [ 1 ] start.js
 
@@ -96,9 +96,9 @@ Ex: +62 895-0889-9033
 
 > Automatically restart the bot if the server closes due to over-limit/error
 
-- 1) Start Normal : The bot will start normally and if there is a fatal error the bot will stop running.
-- 2) Start Looping : The bot will start looping and if there is a fatal error the bot will restart automatically.
-- 3) Install Update : Updates files directly and will overwrite existing files. Make sure you have backed up other important files such as "database" folders and others.
+- [1] Normal : The bot will start normally and if there is a fatal error the bot will stop running.
+- [2] Looping : The bot will start looping and if there is a fatal error the bot will restart automatically.
+- [3] Update : Updates files directly and will overwrite existing files. Make sure you have backed up other important files such as "database" folders and others.
 
 ### [ 2 ] CLI Menu
 
@@ -106,9 +106,9 @@ Ex: +62 895-0889-9033
 
 > Manage sessions in real time while nodejs is running by simply pressing "enter"
 
-- 1) Stop all session : Stops all running bot sessions/numbers
-- 2) Add another session : Adding new bot session/number
-- 3) Run another session : Run another available session in the session list
+- [1] Stop  : Stops all running bot sessions/numbers
+- [2] Adds  : Adding new bot session/number
+- [3] Runs  : Run another available session in the session list
 
 
 ### [ 3 ] vikaru-md
@@ -153,9 +153,9 @@ Vikaru-Md is a multi-device WhatsApp bot designed to easily meet various needs, 
 
 ---
 
-## # Script Info
+## # Vikaru-Md | ( info )
 
-You can buy this script via this [Telegram](https://t.me/dcodemaxz) / [WhatsApp](https://wa.me/6289508899033)
+> You can buy this script via this [Telegram](https://t.me/dcodemaxz) / [WhatsApp](https://wa.me/6289508899033)
 
 Buyer benefits :
 
@@ -163,8 +163,6 @@ Buyer benefits :
 - Update every week
 - Given guidance to modify
 - Guided to be able to develop bots
-
-You can also use and see the bot features via community [group](https://chat.whatsapp.com/JfpGsd5GPh5EzvRVjm54tx)
 
 ---
 
