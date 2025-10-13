@@ -42,10 +42,15 @@ apt update && apt upgrade -y
 apt install git -y
 ```
 
-- Clone Vikaru-Md repo ( vip only )
+- Clone Vikaru-Md repo
 
 ```
 git clone https://github.com/dcodemaxz/vikaru-md.git
+```
+
+- Enter repository token ( vip only )
+```
+xxxxxxxxxxxxx
 ```
 
 ---
@@ -97,7 +102,7 @@ Manage sessions in real time while nodejs is running by simply pressing "enter"
 
 ## # Feature info
 
-### [ 1 ] start.sh
+### [ 1 ] start.js
 
 <img src="media/start.png" alt="Header Image" width="100%"/>
 
@@ -111,12 +116,12 @@ Automatically restart the bot if the server closes due to over-limit/error
 
 Vikaru-Md is a multi-device WhatsApp bot designed to easily meet various needs, including AI, tools, group management, bug management, and business management. This bot offers comprehensive and unique features, such as:
 
-#### • [ Fitur Lainnya ]
+#### • [ Other Features ]
 
 - Pairing code
 - Custom pairing
 - CLI Interactive menu
-- Password and whitelist system when index.js is run
+- Whitelist system when index.js is run
 - The code is neat and easy to modify
 - Multi prefix
 - Multi session (can run on multiple numbers)
@@ -125,14 +130,14 @@ Vikaru-Md is a multi-device WhatsApp bot designed to easily meet various needs, 
 - Anti link grup
 - Anti promosi
 - Anti Toxic
-- Anti culik bot ke grup
+- Anti bot kidnapping to group
 - Anti Virtex/Spam
 - Welcome, Leave, promote, and demote messages
 - Pushkontak
-- Vn automatic voice
+- Auto vn
 - Auto AI
 
-#### • [ Menu Utama ]
+#### • [ Main course ]
 
 - Other Menu
 - Ai Menu
