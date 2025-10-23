@@ -1,6 +1,7 @@
+
 > Translate ( Indonesian )
 
-Jika kamu menggunakan browser chrome kamu bisa mengetuk titik 3 yang ada di pojok kanan atas untuk opsi "Terjemahkan..."
+Jika Anda menggunakan browser Chrome, ketuk titik tiga di sudut kanan atas untuk opsi "Terjemahkan..."
 
 ---
 
@@ -12,9 +13,8 @@ Jika kamu menggunakan browser chrome kamu bisa mengetuk titik 3 yang ada di pojo
 
 <br/>
 
-
 <a href="https://chat.whatsapp.com/GlNdk54lm9V7C4U54SXnh1">
-    <img src="https://img.shields.io/badge/WhatsApp-Comunity-25D366?logo=whatsapp&logoColor=white" alt="WhatsApp Comunity" />
+    <img src="https://img.shields.io/badge/WhatsApp-Comunity-25D366?logo=whatsapp&logoColor=white" alt="WhatsApp Community" />
 </a>
 
 <a href="https://github.com/dcodemaxz/Vikaru-Bot/stargazers">
@@ -24,156 +24,121 @@ Jika kamu menggunakan browser chrome kamu bisa mengetuk titik 3 yang ada di pojo
     <img src="https://img.shields.io/github/forks/dcodemaxz/Vikaru-Bot" alt="Forks"/>
 </a>
 
-
 </div>
 
-## # Vikaru-Md | ( install )
+## # Vikaru-Md | ( Installation )
 
-- Open and update your terminal / Ubuntu / [Termux](https://github.com/termux/termux-app/releases/tag/)
+Starting from version 2.0 and above, **installation and environment setup** are now handled automatically through the **[Vikaru-Installer](https://github.com/dcodemaxz/vikaru-installer)** repository.
+
+To install, follow these simple steps:
 
 ```
 apt update && apt upgrade -y
+apt install git bash -y
+git clone https://github.com/dcodemaxz/vikaru-installer.git
+cd vikaru-installer
+bash start.sh
 ```
 
-- Install git
+Then select menu:
+```
+• [4] Create keys
+```
+Copy the generated public key and send it to the developer.
 
-```
-apt install git -y
-```
-
-- Install nodejs
-
-```
-apt install nodejs -y
-```
-
-- Clone Vikaru-Md repo
-
-```
-git clone https://github.com/dcodemaxz/vikaru-md.git
-```
-
-- Enter repository token ( vip only )
-```
-xxxxxxxxxxxxx
-```
+Once your key is approved, you can update or install the bot using the installer.
 
 ---
 
-## # Vikaru-Md | ( start )
+## # Vikaru-Md | ( Start )
 
-- Enter the file storage directory
+After installation via the **Vikaru-Installer**, simply run:
 
 ```
 cd vikaru-md
+bash start.sh
 ```
 
-- Start bot
-
+Then select menu:
 ```
-node start.js
-```
-
-- Enter the WhatsApp number (62: country code)
-
-```
-Ex: +62 895-0889-9033
+• [1] Start Bot
 ```
 
-- Then copy the pairing code and enter the code via the WhatsApp notification that appears.
-- Wait until it enters, then name the device as you wish.
+Enter your WhatsApp number in international format (e.g., +62 895-0889-9033).  
+Then, copy and paste the pairing code into your WhatsApp app when prompted.
 
-- Then try sending a simple cmd to the bot number
+Once the connection is successful, the bot will be ready for use.  
+Try sending a simple command:
 
 ```
 /menu
 ```
 
-<img src="media/menu.png" alt="Header Image" width="50%"/>
+<img src="media/menu.png" alt="Menu Preview" width="50%"/>
 
 ---
 
-## # Vikaru-Md | ( features )
+## # Vikaru-Md | ( Features )
 
-### [ 1 ] start.js
+### CLI Menu
 
-<img src="media/start.png" alt="Header Image" width="100%"/>
+<img src="media/climenu.png" alt="CLI Menu Preview" width="100%"/>
 
-> Automatically restart the bot if the server closes due to over-limit/error
+> Manage sessions in real time while Node.js is running — just press "Enter" to open.
 
-- [1] Normal : The bot will start normally and if there is a fatal error the bot will stop running.
-- [2] Looping : The bot will start looping and if there is a fatal error the bot will restart automatically.
-- [3] Update : Updates files directly and will overwrite existing files. Make sure you have backed up other important files such as "database" folders and others.
+- [1] **Stop:** Stop all running sessions.  
+- [2] **Add:** Add a new WhatsApp session.  
+- [3] **Run:** Start a saved session from the session list.
 
-### [ 2 ] CLI Menu
+### Vikaru-Md Bot Core
 
-<img src="media/climenu.png" alt="Header Image" width="100%"/>
+**Vikaru-Md** is a multi-device WhatsApp bot designed for automation, AI integration, group moderation, and business support — with a clean, extensible, and developer-friendly architecture.
 
-> Manage sessions in real time while nodejs is running by simply pressing "enter"
+#### • [ Core Highlights ]
 
-- [1] Stop  : Stops all running bot sessions/numbers
-- [2] Adds  : Adding new bot session/number
-- [3] Runs  : Run another available session in the session list
+- Pairing Code & QR Code login  
+- Custom Pairing ID  
+- CLI Interactive Menu  
+- Whitelist system for index.js  
+- Clean & readable codebase  
+- Multi-prefix support  
+- Multi-session (run multiple bots simultaneously)  
+- Interactive interface/log viewer  
+- Anti Call / Anti Spam / Anti Link / Anti Virtex  
+- Group event responses (welcome, leave, promote, demote)  
+- Broadcast / Push Contact / Auto AI / Auto VN
 
+#### • [ Command Categories ]
 
-### [ 3 ] vikaru-md
-
-Vikaru-Md is a multi-device WhatsApp bot designed to easily meet various needs, including AI, tools, group management, bug management, and business management. This bot offers comprehensive and unique features, such as:
-
-#### • [ Other Features ]
-
-- Pairing code & qr code
-- Custom pairing
-- CLI Interactive menu
-- Whitelist system when index.js is run
-- The code is neat and easy to modify
-- Multi prefix
-- Multi session (can run on multiple numbers)
-- Innovative interface/log display
-- Anti call
-- Anti link grup
-- Anti promosi
-- Anti Toxic
-- Anti bot kidnapping to group
-- Anti Virtex/Spam
-- Welcome, Leave, promote, and demote messages
-- Pushkontak
-- Broadcast
-- Banned
-- Bug / Delay
-- Auto vn
-- Auto AI
-
-#### • [ Main course ]
-
-- Other Menu
-- Ai Menu
-- Convert Menu
-- Search Menu
-- Anime Menu
-- Bug Menu
-- Tools Menu
-- Group Menu
-- System Menu
+- Other Menu  
+- AI Menu  
+- Convert Menu  
+- Search Menu  
+- Anime Menu  
+- Bug Menu  
+- Tools Menu  
+- Group Menu  
+- System Menu  
 
 ---
 
-## # Vikaru-Md | ( info )
+## # Vikaru-Md | ( Purchase Info )
 
-> You can buy this script via this [Telegram](https://t.me/dcodemaxz) / [WhatsApp](https://wa.me/6289508899033)
+> You can purchase the script through [Telegram](https://t.me/dcodemaxz) or [WhatsApp](https://wa.me/6289508899033)
 
-Buyer benefits :
+**Buyer Benefits:**
 
-- Get free updates ( No Expired )
-- Update every week
-- Given guidance to modify
-- Guided to be able to develop bots
+- Lifetime updates (no expiration)  
+- Weekly feature updates  
+- Developer modification guidance  
+- Personal mentoring to build your own bot
 
 ---
 
 ## # Contributing
 
-Feel free to contribute by opening issues or pull requests. Your feedback and contributions are highly appreciated.
+We welcome contributions!  
+Open an issue or pull request — feedback and improvements are highly appreciated.
 
 ---
 
