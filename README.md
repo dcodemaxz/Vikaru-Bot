@@ -28,25 +28,23 @@ Jika Anda menggunakan browser Chrome, ketuk titik tiga di sudut kanan atas untuk
 
 ## # Vikaru-Md | ( Installation )
 
-Starting from version 2.0 and above, **installation and environment setup** are now handled automatically through the **[Vikaru-Installer](https://github.com/dcodemaxz/vikaru-installer)** repository.
+Starting from v2.3.0 and above, **installation and environment setup** are now handled automatically through the **( [Vikaru-Installer](https://github.com/dcodemaxz/vikaru-installer) )** repository.
 
 To install, follow these simple steps:
 
 ```
 apt update && apt upgrade -y
 apt install git bash -y
-git clone https://github.com/dcodemaxz/vikaru-installer.git
-cd vikaru-installer
-bash start.sh
+git clone https://github.com/dcodemaxz/vikaru-installer.git vikaru
+cd vikaru
+bash start
 ```
 
 Then select menu:
 ```
 • [4] Create keys
 ```
-Copy the generated public key and send it to the developer.
-
-Once your key is approved, you can update or install the bot using the installer.
+Copy the generated **public key** and send it to the [developer](https://wa.me/+6289508899033).
 
 ---
 
@@ -64,8 +62,8 @@ Then select menu:
 • [1] Start Bot
 ```
 
-Enter your WhatsApp number in international format (e.g., +62 895-0889-9033).  
-Then, copy and paste the pairing code into your WhatsApp app when prompted.
+Enter your WhatsApp number in international format ( e.g., +62 895-0889-9033 ).  
+Then, copy and link the pairing code to your WhatsApp application.
 
 Once the connection is successful, the bot will be ready for use.  
 Try sending a simple command:
