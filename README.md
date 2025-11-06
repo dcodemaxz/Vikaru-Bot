@@ -30,34 +30,12 @@ Jika Anda menggunakan browser Chrome, ketuk titik tiga di sudut kanan atas untuk
 
 Starting from v2.3.0 and above, **installation and environment setup** are now handled automatically through the **( [Vikaru-Installer](https://github.com/dcodemaxz/vikaru-installer) )** repository.
 
-To install, follow these simple steps:
-
-```
-apt update && apt upgrade -y
-apt install git bash -y
-git clone https://github.com/dcodemaxz/vikaru-installer.git vikaru
-cd vikaru
-bash start
-```
-
-Then select menu:
-```
-• [4] Create keys
-```
-Copy the generated **public key** and send it to the [developer](https://wa.me/+6289508899033).
-
----
+___
 
 ## # Vikaru-Md | ( Start )
 
 After installation via the **Vikaru-Installer**, simply run:
 
-```
-cd vikaru-md
-bash start.sh
-```
-
-Then select menu:
 ```
 • [1] Start Bot
 ```
