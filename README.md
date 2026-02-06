@@ -11,10 +11,6 @@
 
 <br/>
 
-<a href="https://chat.whatsapp.com/GlNdk54lm9V7C4U54SXnh1">
-    <img src="https://img.shields.io/badge/WhatsApp-Comunity-25D366?logo=whatsapp&logoColor=white" alt="WhatsApp Community" />
-</a>
-
 <a href="https://github.com/dcodemaxz/vikaru-bot/stargazers">
     <img src="https://img.shields.io/github/stars/dcodemaxz/vikaru-bot" alt="Stars"/>
 </a>
@@ -198,6 +194,96 @@ Vikaru-Md juga berfungsi sebagai **downloader utility**, mendukung:
 - Audio / Video
 
 Didukung oleh **yt-dlp** dengan integrasi langsung ke bot.
+
+---
+
+## 🏗️ Architecture Overview
+
+```mermaid
+graph TD
+    %% ENTRY POINT
+    A["CLI / Runtime Entry<br/>index.js"] --> B["Main Controller<br/>vikaru.js"]
+
+    %% CORE FLOW
+    B --> C["Message Handler<br/>scraper/message.js"]
+    C --> D["System Core<br/>scraper/system.js"]
+
+    %% SETTINGS & CONFIG
+    D --> CFG["Settings Loader<br/>settings/config.js"]
+    CFG --> SJSON["JSON Config<br/>setmenu.json · setting.json"]
+
+    %% PLUGIN ROUTER
+    D --> PRT["Plugin Router<br/>main/plugins/_plugin.js"]
+
+    %% PLUGINS
+    PRT --> P1["addcmd.js"]
+    PRT --> P2["_menu.js"]
+    PRT --> P3["_owner.js"]
+    PRT --> P4["_register.js"]
+    PRT --> P5["_shop.js"]
+    PRT --> P6["_test.js"]
+
+    %% EXPORTS (ACCESS CONTROL & FILTER)
+    D --> EX["Exports Middleware"]
+    EX --> E1["clear.js"]
+    EX --> E2["group.js"]
+    EX --> E3["hidetext.js"]
+    EX --> E4["nsfw.js"]
+    EX --> E5["only.js"]
+    EX --> E6["sfw.js"]
+    EX --> E7["voice.js"]
+
+    %% SCRAPER / TOOLS
+    D --> SC["Scraper & Tools"]
+    SC --> S1["downloader.js"]
+    SC --> S2["gitClone.js"]
+    SC --> S3["gitUploader.js"]
+    SC --> S4["removeBg.js"]
+    SC --> S5["converter.js"]
+    SC --> S6["exif.js"]
+
+    %% CORE HELPERS
+    D --> H1["firstchat.js"]
+    D --> H2["limit.js"]
+    D --> H3["store.js"]
+    D --> H4["myfunction.js"]
+
+    %% DATABASE LAYER
+    D --> DB["Database JSON"]
+    DB --> DB1["database.json"]
+    DB --> DB2["firstchat.json"]
+    DB --> DB3["history.json"]
+    DB --> DB4["jids.json"]
+    DB --> DB5["limit.json"]
+    DB --> DB6["otp.json"]
+    DB --> DB7["welcome.json"]
+
+    %% MEDIA ASSETS
+    B --> M["Media Assets"]
+    M --> MA["audio"]
+    M --> MI["image"]
+    M --> MS["sticker"]
+    M --> MV["video"]
+    M --> MD["document"]
+
+    %% SESSION & RUNTIME
+    B --> SS["Session"]
+    B --> NM["node_modules"]
+
+    %% STYLES
+    style A fill:#1e1e1e,stroke:#9e9e9e,color:#e0e0e0
+    style B fill:#202020,stroke:#cfd8dc,color:#ffffff
+    style C fill:#252525,stroke:#b0bec5,color:#e0e0e0
+    style D fill:#2c2c2c,stroke:#90a4ae,color:#ffffff
+
+    style PRT fill:#303030,stroke:#4fc3f7,color:#e1f5fe
+    style EX fill:#303030,stroke:#ffb74d,color:#fff3e0
+    style SC fill:#263238,stroke:#29b6f6,color:#e1f5fe
+
+    style DB fill:#2f2f2f,stroke:#a1887f,color:#efebe9
+    style M fill:#212121,stroke:#90caf9,color:#e3f2fd
+    style SS fill:#2a2a2a,stroke:#ffb300,color:#fff8e1
+```
 
 ---
 
