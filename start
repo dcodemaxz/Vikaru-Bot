@@ -1,0 +1,89 @@
+# ----------------------------------------------------------------------------- #
+# ❏ [🧬] SOURCE CODE
+# ----------------------------------------------------------------------------- #
+# • Project   : Vikaru-Insatller
+# • Developer : dcodemaxz | Maxz
+# • Contact   : https://linktr.ee/dcodemaxz
+# • Installer : https://github.com/dcodemaxz/vikaru-installer
+#
+# ----------------------------------------------------------------------------- #
+# ❏ [💡] Note:
+# ----------------------------------------------------------------------------- #
+# • Thank you for supporting this project by purchasing the script.
+# • Before running this bot, make sure you have installed it correctly using
+#   the official Vikaru-Installer repository above.
+# ----------------------------------------------------------------------------- #
+
+
+# ----------------------------------------------------------------------------- #
+# ❏ [🔄] Auto-Restart & Dependency Management
+# ----------------------------------------------------------------------------- #
+# This script provides a simple and reliable control interface for managing the
+# Vikaru-Md WhatsApp Bot (Node.js based). It ensures the bot runs smoothly on
+# both VPS and Termux environments by automatically handling restarts and
+# dependency checks.
+#
+#
+# ----------------------------------------------------------------------------- #
+# ❏ [⚡] Progress Overview:
+# ----------------------------------------------------------------------------- #
+# • Interactive CLI menu to control bot operation.
+# • Automatically checks and installs dependencies (Node.js, ffmpeg, etc.).
+# • Validates key project files (index.js, package.json, node_modules).
+# • Auto-restarts the bot if an error or crash occurs.
+# • Checks network connectivity before launch.
+# • Includes a safe shutdown handler (Ctrl + C) to exit gracefully.
+#
+#
+# ----------------------------------------------------------------------------- #
+# ❏ [📌] Requirements:
+# ----------------------------------------------------------------------------- #
+# • Node.js (LTS / Latest).
+# • npm must be installed and accessible.
+# • Must be executed from the Vikaru-Md directory containing
+# • Recommended to install via: https://github.com/dcodemaxz/vikaru-installer
+#
+#
+# ----------------------------------------------------------------------------- #
+# ❏ [⚙️] How It Works:
+# ----------------------------------------------------------------------------- #
+# • Environment Detection:
+#     - Automatically detects if running on Termux or VPS and installs
+#     - missing dependencies accordingly.
+#
+# • Menu Interface:
+#     - Displays control options (Start, Loop, Update, Create Keys, etc.)
+#     - to easily manage the bot.
+#
+# • Validation:
+#     - Checks file integrity, dependencies, and internet connection before start.
+#
+# • Auto-Restart:
+#     - Monitors npm process and restarts the bot automatically if it crashes.
+#
+# • Graceful Shutdown:
+#     - Handles manual termination signals (e.g., Ctrl + C) and exits cleanly.
+#
+# ----------------------------------------------------------------------------- #
+
+
+set -euo pipefail
+_aAbB9cCdD8eEfFgG7hHiIjJ6kKlLmMnN5oOpPqQ4rRsStT3uUvVwW2xXyYzZ1_0aBcDeF001=$(readlink -f "${BASH_SOURCE[0]}")
+_X2YyZz9WwVvUuT7SsRrQqP4oOnNmMlKkJiIhHhGgFfEeDdLlCcBbAa="edf5cd6333a10943780a31ecc54d479e147134673dc3ecfae1e70fd664b9faed"
+_C9F8E7D6A5B4C3D2E1F0A9B8C7D6E5F4A3B2C1D0E9F8A7B6C5D4E3F2A1B0C9D=$(grep -v '^_H6G5F4E3D2C1B0A9BXxYyWwVvUuT7tSsRrQqPpOoNnM=' "$_aAbB9cCdD8eEfFgG7hHiIjJ6kKlLmMnN5oOpPqQ4rRsStT3uUvVwW2xXyYzZ1_0aBcDeF001" | sha256sum | awk '{print $1}')
+_H6G5F4E3D2C1B0A9BXxYyWwVvUuT7tSsRrQqPpOoNnM="31b7e228ba39a6d0fbcb9f6495f996cabd01309d046d7e67c01df9d7cac21773"
+if [[ "$_C9F8E7D6A5B4C3D2E1F0A9B8C7D6E5F4A3B2C1D0E9F8A7B6C5D4E3F2A1B0C9D" != "$_H6G5F4E3D2C1B0A9BXxYyWwVvUuT7tSsRrQqPpOoNnM" ]]; then exit 9; fi
+_ZzXxYyWwVvUuT7tSsRrQqPpOoNnMm5LlKkJjIiHhGgFfEeDdQcBbAa9_=$(cat <<'_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
+_0xD8eEfFgG7hHiIjJ6k4oOnNmMlKC7D6E5F4AD4E3F2A1B0C3B2C1D0E9F8A7B6kJiIhHh
+)
+_A9B8C7D6E5F4A3B2C1D0E9F8A7B6C5D4E3F2A1B0C9D=$(mktemp --suffix=.gz)
+_H6G5F4E3D2C1B0A9B8C7D6E5F4A3B2C1D0E9F8A7B6C5D4E3F2A1B0C9Dz=$(mktemp)
+trap 'rm -f "$_A9B8C7D6E5F4A3B2C1D0E9F8A7B6C5D4E3F2A1B0C9D" "$_H6G5F4E3D2C1B0A9B8C7D6E5F4A3B2C1D0E9F8A7B6C5D4E3F2A1B0C9Dz"; exit' EXIT
+printf "%s" "$_ZzXxYyWwVvUuT7tSsRrQqPpOoNnMm5LlKkJjIiHhGgFfEeDdQcBbAa9_" | base64 -d > "$_A9B8C7D6E5F4A3B2C1D0E9F8A7B6C5D4E3F2A1B0C9D"
+gzip -dc "$_A9B8C7D6E5F4A3B2C1D0E9F8A7B6C5D4E3F2A1B0C9D" > "$_H6G5F4E3D2C1B0A9B8C7D6E5F4A3B2C1D0E9F8A7B6C5D4E3F2A1B0C9Dz"
+_L4K3J2I1H0G9F8E7D6C5B4A3B2C1D0E9F8A7B6C5D4E3F2A1B0C9D_=$(sha256sum "$_H6G5F4E3D2C1B0A9B8C7D6E5F4A3B2C1D0E9F8A7B6C5D4E3F2A1B0C9Dz" | awk '{print $1}')
+if [[ "$_L4K3J2I1H0G9F8E7D6C5B4A3B2C1D0E9F8A7B6C5D4E3F2A1B0C9D_" != "$_X2YyZz9WwVvUuT7SsRrQqP4oOnNmMlKkJiIhHhGgFfEeDdLlCcBbAa" ]]; then exit 3; fi
+_D4R3E2C1T0R9Y8A7B6C5D4E3F2A1B0C9D=$(dirname "$_aAbB9cCdD8eEfFgG7hHiIjJ6kKlLmMnN5oOpPqQ4rRsStT3uUvVwW2xXyYzZ1_0aBcDeF001")
+cd "$_D4R3E2C1T0R9Y8A7B6C5D4E3F2A1B0C9D"
+exec bash -c '. "$1" "$@"' sh "$_H6G5F4E3D2C1B0A9B8C7D6E5F4A3B2C1D0E9F8A7B6C5D4E3F2A1B0C9Dz" "$@"
