@@ -3,7 +3,7 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=EEEEEE&height=230&section=header&text=Vikaru-Bot&fontSize=75&fontAlignY=30&animation=twinkling&fontColor=000&desc=Tools%20for%20vikaru-md%20management&descAlignY=55&descSize=20&descColor=555" width="100%" />
 </p>
 
-# <div align='center'>Vikaru-Md | WhatsApp Bot Multidevice</div>
+# <div align='center'>WhatsApp Bot Multidevice</div>
 
 <div align="center">
 
@@ -155,48 +155,6 @@ Setelah sukses, kirim perintah:
 
 ---
 
-## 🤖 Vikaru-Md Bot Core
-
-### ✨ Core Highlights
-
-- Pairing Code & QR Code login
-- Custom Pairing ID
-- CLI Interactive Menu
-- Whitelist system ( index.js )
-- Clean & readable codebase
-- Multi-prefix support
-- Multi-session (multi bot)
-- Interactive log viewer
-- Anti Call / Anti Spam / Anti Link / Anti Virtex
-- Group events ( welcome, leave, promote, demote )
-- Broadcast / Push Contact
-- Auto AI / Auto VN
-- dll / etc
-
-### 📂 Command Categories
-
-- Other Menu
-- AI Menu
-- Convert Menu
-- Search Menu
-- Anime Menu
-- Tools Menu
-- Group Menu
-- System Menu
-
----
-
-## ⬇️ Downloader Features
-
-Vikaru-Md juga berfungsi sebagai **downloader utility**, mendukung:
-- YouTube
-- Hampir semua media sosial
-- Audio / Video
-
-Didukung oleh **yt-dlp** dengan integrasi langsung ke bot.
-
----
-
 ## 🏗️ Architecture Overview
 
 ```mermaid
@@ -284,6 +242,48 @@ graph TD
     style M fill:#212121,stroke:#90caf9,color:#e3f2fd
     style SS fill:#2a2a2a,stroke:#ffb300,color:#fff8e1
 ```
+
+---
+
+## 🤖 Vikaru-Md Bot Core
+
+### ✨ Core Highlights
+
+- Pairing Code & QR Code login
+- Custom Pairing ID
+- CLI Interactive Menu
+- Whitelist system ( index.js )
+- Clean & readable codebase
+- Multi-prefix support
+- Multi-session (multi bot)
+- Interactive log viewer
+- Anti Call / Anti Spam / Anti Link / Anti Virtex
+- Group events ( welcome, leave, promote, demote )
+- Broadcast / Push Contact
+- Auto AI / Auto VN
+- dll / etc
+
+### 📂 Command Categories
+
+- Other Menu
+- AI Menu
+- Convert Menu
+- Search Menu
+- Anime Menu
+- Tools Menu
+- Group Menu
+- System Menu
+
+---
+
+## ⬇️ Downloader Features
+
+Vikaru-Md juga berfungsi sebagai **downloader utility**, mendukung:
+- YouTube
+- Hampir semua media sosial
+- Audio / Video
+
+Didukung oleh **yt-dlp** dengan integrasi langsung ke bot.
 
 ---
 
