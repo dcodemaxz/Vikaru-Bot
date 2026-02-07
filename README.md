@@ -40,89 +40,83 @@ Memiliki arsitektur **clean, modular, dan developer-friendly**, serta mendukung 
 
 ## ⚙️ Installation (All-in-One)
 
+<details open>
+
 ### 1. Update environment ( Debian / Ubuntu / VPS )
 
 ```bash
-apt update -y && apt upgrade -y
+apt update -y && apt upgrade -y && apt install git make -y
 ```
 
-### 2. Install dependencies
-
-#### Linux ( Ubuntu / Debian / VPS )
-
-```bash
-sudo apt install -y git bash curl python3 python3-pip ffmpeg && \
-curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo bash - && \
-sudo apt install -y nodejs && \
-sudo wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O /usr/local/bin/yt-dlp && \
-sudo chmod a+rx /usr/local/bin/yt-dlp && yt-dlp --version
-```
-
-#### Termux ( Android / Emulator )
-
-```bash
-pkg install -y git bash python nodejs ffmpeg && \
-wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp && \
-chmod a+rx yt-dlp && mv yt-dlp $PREFIX/bin/ && yt-dlp --version
-```
-
-### 3. Clone repository
+### 2. Clone repository
 
 ```bash
 git clone https://github.com/dcodemaxz/vikaru-bot.git vikaru
 ```
 
+### 3. Install dependencies (first time)
+
+```bash
+make install
+```
+
+</details>
+
 ---
 
 ## 🚀 Getting Started
 
-### 1. Masuk ke direktori project
+<details open>
+
+### 1. Enter the project directory
 
 ```bash
 cd vikaru
 ```
 
-### 2. Jalankan launcher
+### 2. Run script
 
 ```bash
-bash start
+make run
 ```
+
+</details>
 
 ---
 
-## 🔐 Generate SSH Key ( Verifikasi Lisensi )
-
-Dari menu, pilih:
-
-```
-• [3] Generate keys
-```
+## 🔐 Generate SSH Key ( Verifikasi )
 
 > [!IMPORTANT]
-> Salin **public key** yang dihasilkan lalu kirim ke developer untuk aktivasi.
+> Salin **public key** yang dihasilkan lalu kirim ke **developer** untuk aktivasi.
 
 > [!CAUTION]
-> ⚠️ Jangan pernah membagikan **private key** (`id_ed25519`).
+> Jangan pernah membagikan **private key** (`id_ed25519`).
 
-Kontak developer:
-- WhatsApp: https://wa.me/6289508899033
-- Telegram: https://t.me/dcodemaxz
+<details close>
+<summary><strong>📞 Kontak Developer</strong></summary>
+
+- [WhatsApp](https://wa.me/6289508899033)
+- [Telegram](https://t.me/dcodemaxz)
+
+</details>
 
 ---
 
 ## ▶️ Start Bot
 
-Dari menu utama:
+<details open>
+
+> Dari menu utama:
 
 ```
 • [1] Deploy Bot
 ```
 
-Jika bot belum terpasang, sistem akan:
+> Jika bot belum terpasang, sistem akan:
 - Install otomatis
 - Setup environment
 
-Jika bot sudah ada, akan muncul prompt:
+> Jika bot sudah ada, akan muncul prompt:
 
 ```
 [ Y = Update / N = Start ] ?
@@ -131,15 +125,17 @@ Jika bot sudah ada, akan muncul prompt:
 - **Y** → Update bot
 - **N** → Langsung menjalankan bot (loop-safe, anti-exit)
 
-Masukkan nomor WhatsApp (format internasional, contoh `+6289508899033`) lalu hubungkan **pairing code** ke WhatsApp Anda.
+> Masukkan nomor WhatsApp (format internasional, contoh `+6289508899033`) lalu hubungkan **pairing code** ke WhatsApp Anda.
 
-Setelah sukses, kirim perintah:
+> Setelah sukses, kirim perintah:
 
 ```
 /menu
 ```
 
 <img src="media/menu.png" alt="Menu Preview" width="50%"/>
+
+</details>
 
 ---
 
@@ -149,9 +145,9 @@ Setelah sukses, kirim perintah:
 
 > Kelola session secara real-time saat Node.js berjalan ( tekan **Enter** ).
 
-- **[1] Stop** → Hentikan semua session
-- **[2] Adds** → Tambah session WhatsApp baru
-- **[3] Runs** → Jalankan session tersimpan
+- **[1] Stop** = Hentikan semua session
+- **[2] Adds** = Tambah session WhatsApp baru
+- **[3] Runs** = Jalankan session tersimpan
 
 ---
 
@@ -249,6 +245,8 @@ graph TD
 
 ### ✨ Core Highlights
 
+<details open>
+
 - Pairing Code & QR Code login
 - Custom Pairing ID
 - CLI Interactive Menu
@@ -263,7 +261,11 @@ graph TD
 - Auto AI / Auto VN
 - dll / etc
 
+</details>
+
 ### 📂 Command Categories
+
+<details open>
 
 - Other Menu
 - AI Menu
@@ -273,6 +275,8 @@ graph TD
 - Tools Menu
 - Group Menu
 - System Menu
+
+</details>
 
 ---
 
