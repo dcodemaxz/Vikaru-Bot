@@ -43,6 +43,6 @@ install-termux:
 # Start
 start:
 	@echo "\n▶️  Starting vikaru-bot...\n"
-	npm start
+	bash start
 
 run: start
