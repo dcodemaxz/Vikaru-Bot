@@ -13,7 +13,7 @@ ENV := $(shell \
 
 # Main entry
 install:
-	@echo "\n🔍 Detected environment: $(ENV)"
+	@echo "\n🔍 Detected environment: $(ENV)\n"
 ifeq ($(ENV),termux)
 	@$(MAKE) install-termux
 else
@@ -23,18 +23,25 @@ endif
 # Linux (Ubuntu / Debian / VPS)
 install-linux:
 	@echo "\n🚀 Installing dependencies for Linux...\n"
+	sudo apt update -y && sudo apt upgrade -y
 	sudo apt install -y git bash pv bc curl python3 python3-pip ffmpeg
+
+	@echo "\n🌐 Installing Node.js LTS...\n"
 	curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 	sudo apt install -y nodejs
-	sudo wget -q https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp \
-		-O /usr/local/bin/yt-dlp
+
+	@echo "\n🎬 Installing yt-dlp...\n"
+	sudo wget -q https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O /usr/local/bin/yt-dlp
 	sudo chmod a+rx /usr/local/bin/yt-dlp
 	@yt-dlp --version
 
 # Termux (Android / Emulator)
 install-termux:
 	@echo "\n🚀 Installing dependencies for Termux...\n"
+	sudo apt update -y && sudo apt upgrade -y
 	pkg install -y git bash pv bc python nodejs ffmpeg wget
+
+	@echo "\n🎬 Installing yt-dlp...\n"
 	wget -q https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
 	chmod a+rx yt-dlp
 	mv yt-dlp $$PREFIX/bin/
