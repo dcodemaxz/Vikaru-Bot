@@ -38,7 +38,7 @@ install-linux:
 # Termux (Android / Emulator)
 install-termux:
 	@echo "\n🚀 Installing dependencies for Termux...\n"
-	sudo apt update -y && sudo apt upgrade -y
+	apt update -y && apt upgrade -y
 	pkg install -y git bash pv bc python nodejs ffmpeg wget
 
 	@echo "\n🎬 Installing yt-dlp...\n"
